@@ -1,7 +1,7 @@
 defmodule ElixirKanbanWeb.PageController do
   use ElixirKanbanWeb, :controller
 
-  @spec home(Plug.conn.t(), map()) :: []
+  @spec home(Plug.Conn.t(), map()) :: []
   def home(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.

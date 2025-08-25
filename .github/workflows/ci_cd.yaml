@@ -7,7 +7,7 @@ on:
 jobs:
     ci:
         runs-on: ubuntu-latest
-        name: Compile
+        name: Compile with Mix test
         env:
             MIX_ENV: test
         steps:
@@ -32,5 +32,6 @@ jobs:
             - name: Get dependencies
               if: steps.cache-deps.outputs.cache-hit != 'true'
               run: mix deps.get
-            
+            - name: Run mix test
+              run: mix test --max-failures 1 --trace --warnings-as-errors
             - run: mix compile --warnings-as-errors

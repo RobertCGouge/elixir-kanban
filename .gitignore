@@ -12,7 +12,8 @@ erl_crash.dump
 *.beam
 /config/*.secret.exs
 .elixir_ls/
-
+/priv/plts/*.plt
+/priv/plts/*.plt.hash
 ### Elixir Patch ###
 
 ### Phoenix ###

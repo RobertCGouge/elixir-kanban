@@ -34,4 +34,6 @@ jobs:
               run: mix deps.get
             - name: Run mix test
               run: mix test --max-failures 1 --trace --warnings-as-errors
+            - name: Check code is formatted
+              run: mix format --check-formatted
             - run: mix compile --warnings-as-errors

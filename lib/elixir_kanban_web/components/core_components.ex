@@ -12,7 +12,7 @@ defmodule ElixirKanbanWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import ElixirKanbanWeb.Gettext
+  use Gettext, backend: ElixirKanbanWeb.Gettext
 
   @doc """
   Renders a modal.
